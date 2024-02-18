@@ -368,6 +368,7 @@ export interface ApiStudentStudent extends Schema.CollectionType {
     singularName: 'student';
     pluralName: 'students';
     displayName: 'student';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -380,6 +381,12 @@ export interface ApiStudentStudent extends Schema.CollectionType {
         maxLength: 10;
       }>;
     person_pic: Attribute.Media & Attribute.Required;
+    father_name: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        minLength: 3;
+        maxLength: 10;
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
