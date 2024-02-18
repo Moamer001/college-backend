@@ -367,7 +367,7 @@ export interface ApiStudentStudent extends Schema.CollectionType {
   info: {
     singularName: 'student';
     pluralName: 'students';
-    displayName: 'student';
+    displayName: 'request';
     description: '';
   };
   options: {
