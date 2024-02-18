@@ -391,11 +391,6 @@ export interface ApiStudentStudent extends Schema.CollectionType {
       'oneToOne',
       'plugin::users-permissions.user'
     >;
-    user: Attribute.Relation<
-      'api::student.student',
-      'oneToOne',
-      'plugin::users-permissions.user'
-    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -816,11 +811,6 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
       'plugin::users-permissions.user',
       'manyToOne',
       'plugin::users-permissions.role'
-    >;
-    request: Attribute.Relation<
-      'plugin::users-permissions.user',
-      'oneToOne',
-      'api::student.student'
     >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
