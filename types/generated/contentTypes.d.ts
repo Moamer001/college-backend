@@ -380,7 +380,6 @@ export interface ApiStudentStudent extends Schema.CollectionType {
         minLength: 3;
         maxLength: 10;
       }>;
-    person_pic: Attribute.Media & Attribute.Required;
     father_name: Attribute.String &
       Attribute.Required &
       Attribute.SetMinMaxLength<{
