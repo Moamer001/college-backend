@@ -386,6 +386,11 @@ export interface ApiStudentStudent extends Schema.CollectionType {
         minLength: 3;
         maxLength: 10;
       }>;
+    user: Attribute.Relation<
+      'api::student.student',
+      'oneToOne',
+      'plugin::users-permissions.user'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -779,7 +784,6 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
   options: {
     draftAndPublish: false;
-    timestamps: true;
   };
   attributes: {
     username: Attribute.String &
@@ -807,6 +811,11 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
       'plugin::users-permissions.user',
       'manyToOne',
       'plugin::users-permissions.role'
+    >;
+    student: Attribute.Relation<
+      'plugin::users-permissions.user',
+      'oneToOne',
+      'api::student.student'
     >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
