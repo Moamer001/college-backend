@@ -65,7 +65,7 @@
       "inversedBy": "users",
       "configurable": false
     },
-    "student": {
+    "request": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::student.student"
