@@ -386,11 +386,6 @@ export interface ApiStudentStudent extends Schema.CollectionType {
         minLength: 3;
         maxLength: 10;
       }>;
-    user: Attribute.Relation<
-      'api::student.student',
-      'oneToOne',
-      'plugin::users-permissions.user'
-    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

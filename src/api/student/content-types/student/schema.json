@@ -23,12 +23,6 @@
       "required": true,
       "minLength": 3,
       "maxLength": 10
-    },
-    "user": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "plugin::users-permissions.user",
-      "inversedBy": "student"
     }
   }
 }
