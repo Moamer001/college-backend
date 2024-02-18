@@ -807,7 +807,7 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
       'manyToOne',
       'plugin::users-permissions.role'
     >;
-    student: Attribute.Relation<
+    request: Attribute.Relation<
       'plugin::users-permissions.user',
       'oneToOne',
       'api::student.student'
