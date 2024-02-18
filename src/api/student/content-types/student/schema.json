@@ -23,11 +23,6 @@
       "required": true,
       "minLength": 3,
       "maxLength": 10
-    },
-    "users_permissions_user": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "plugin::users-permissions.user"
     }
   }
 }
